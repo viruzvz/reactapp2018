@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import 'bootstrap';
-import '../styles/main.scss';
-import '../styles/main.less';
-// import TemplateApp from './template.js';
 
-export default class App extends Component {
-  render() {
-    return (
-      olá
-    );
-  }
+
+function Welcome(props) {
+	return <h1>Hello, {props.name}</h1>;
 }
 
+function App() {
+	return (
+		<div>
+			<Welcome name='Sara' />
+			<Welcome name='Tara' />
+			<Welcome name='Cara' />
+		</div>
+	)
+}
 render(<App />, document.getElementById('app'));
